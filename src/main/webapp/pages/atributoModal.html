@@ -1,0 +1,127 @@
+<!-- modificar o tamanho do modal para que fique mais largo -->
+<div class="modal fade" id="myModal" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content" id="modalContent">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h2 class="modal-title" id="header-modal"></h2>
+			</div>
+			<div class="modal-body" id="modalBody">
+				<div class="row">
+					<!-- first row with the physic attribute -->
+					<div class="col-sm-4">
+						<h4 id="fisicoTitulo" ><Strong>F&iacute;sico</Strong></h4>
+						<div class="well1" >
+							<div class="well" style="width: 118px;height: 90px;margin-bottom: 1px;padding-top: 0px;padding-bottom: 0px;">
+								<h6 id="forcaTitulo" style="bold"></h6>
+								<img src="../images/icons/strenght_menos.png" height="25" width="25"  onclick="changeAtributesValueInModal($('#forca'), 21, 1, 0)" />
+								<label id="forca" style="width: 20px; text-align: center"></label>
+								<img src="../images/icons/strenght_mais.png" height="25" width="25"  onclick="changeAtributesValueInModal($('#forca'), 21, 1, 1)" />
+								<div class="row">
+									<div class="col-sm-1">
+										<span class="label label-danger" id="span_min_result_21_1" hidden="true" >MIN</span>
+									</div>
+									<div class="col-sm-1" style="padding-left: 7px;"></div>
+									<div class="col-sm-1">
+										<span class="label label-success" id="span_max_result_21_1" hidden="true" >MAX</span>
+									</div>
+								</div>
+							</div>
+							<span class="label label-default" onclick="reset($('#forca'), 21, 1)" >Reset</span>
+							<div class="well" style="width: 118px;height: 90px;margin-bottom: 1px;padding-top: 0px;padding-bottom: 0px;">
+								<h6 id="destrezaTitulo"></h6>
+								<img src="../images/icons/destreza_menos.png" height="25" width="25"  onclick="changeAtributesValueInModal($('#destreza'), 21, 2, 0)" />
+								<label id="destreza" style="width: 20px; text-align: center"></label>
+								<img src="../images/icons/destreza_mais.png" height="25" width="25"  onclick="changeAtributesValueInModal($('#destreza'), 21, 2, 1)" />
+								<div class="row">
+									<div class="col-sm-1">
+										<span class="label label-danger" id="span_min_result_21_2" hidden="true" >MIN</span>
+									</div>
+									<div class="col-sm-1" style="padding-left: 7px;"></div>
+									<div class="col-sm-1">
+										<span class="label label-success" id="span_max_result_21_2" hidden="true" >MAX</span>
+									</div>
+								</div>
+							</div>
+							<span class="label label-default" onclick="reset($('#destreza'), 21, 2)" >Reset</span>
+							<div class="well" style="width: 118px;height: 90px;margin-bottom: 1px;padding-top: 0px;padding-bottom: 0px;">
+								<h6 id="vigorTitulo"></h6>
+								<img src="../images/icons/vigor_menos.png" height="25" width="25"  onclick="changeAtributesValueInModal($('#vigor'), 21, 3, 0)" />
+								<label id="vigor" style="width: 20px; text-align: center"></label>
+								<img src="../images/icons/vigor_mais.png" height="25" width="25"  onclick="changeAtributesValueInModal($('#vigor'), 21, 3, 1)" />
+								<div class="row">
+									<div class="col-sm-1">
+										<span class="label label-danger" id="span_min_result_21_3" hidden="true" >MIN</span>
+									</div>
+									<div class="col-sm-1" style="padding-left: 7px;"></div>
+									<div class="col-sm-1">
+										<span class="label label-success" id="span_max_result_21_3" hidden="true" >MAX</span>
+									</div>
+								</div>
+							</div>
+							<span class="label label-default" onclick="reset($('#vigor'), 21, 3)" >Reset</span>
+						</div>
+					</div>
+					<!-- first row with the Social attribute -->
+					<div class="col-sm-4">
+						<h4 id="socialTitulo"><Strong>Social</Strong></h4>
+						<div class="well1" >
+							<div class="well" style="width: 118px;height: 90px;margin-bottom: 1px;padding-top: 0px;padding-bottom: 0px;">
+								<h6 id="carismaTitulo" style="bold"></h6>
+								<img src="../images/icons/carisma_menos.png" height="25" width="25"  onclick="changeAtributesValueInModal($('#carisma'), 22, 1, 0)" />
+								<label id="carisma" style="width: 20px; text-align: center"></label>
+								<img src="../images/icons/carisma_mais.png" height="25" width="25"  onclick="changeAtributesValueInModal($('#carisma'), 22, 1, 1)" />
+								<div class="row">
+									<div class="col-sm-1">
+										<span class="label label-danger" id="span_min_result_22_1" hidden="true" >MIN</span>
+									</div>
+									<div class="col-sm-1" style="padding-left: 7px;"></div>
+									<div class="col-sm-1">
+										<span class="label label-success" id="span_max_result_22_1" hidden="true" >MAX</span>
+									</div>
+								</div>
+							</div>
+							<span class="label label-default" onclick="reset($('#carisma'), 2, 2, 1)" >Reset</span>
+							<div class="well" style="width: 118px;height: 90px;margin-bottom: 1px;padding-top: 0px;padding-bottom: 0px;">
+								<h6 id="manipulacaoTitulo"></h6>
+								<img src="../images/icons/manipulacao_menos.png" height="25" width="25"  onclick="changeAtributesValueInModal($('#manipulacao'), 22, 2, 0)" />
+								<label id="manipulacao" style="width: 20px; text-align: center"></label>
+								<img src="../images/icons/manipulacao_mais.png" height="25" width="25"  onclick="changeAtributesValueInModal($('#manipulacao'), 22, 2, 1)" />
+								<div class="row">
+									<div class="col-sm-1">
+										<span class="label label-danger" id="span_min_result_22_2" hidden="true" >MIN</span>
+									</div>
+									<div class="col-sm-1" style="padding-left: 7px;"></div>
+									<div class="col-sm-1">
+										<span class="label label-success" id="span_max_result_22_2" hidden="true" >MAX</span>
+									</div>
+								</div>
+							</div>
+							<span class="label label-default" onclick="reset($('#manipulacao'), 22, 2)" >Reset</span>
+							<div class="well" style="width: 118px;height: 90px;margin-bottom: 1px;padding-top: 0px;padding-bottom: 0px;">
+								<h6 id="aparenciaTitulo"></h6>
+								<img src="../images/icons/aparencia_menos.png" height="25" width="25"  onclick="changeAtributesValueInModal($('#aparencia'), 22, 3, 0)" />
+								<label id="aparencia" style="width: 20px; text-align: center"></label>
+								<img src="../images/icons/aparencia_mais.png" height="25" width="25"  onclick="changeAtributesValueInModal($('#aparencia'), 22, 3, 1)" />
+								<div class="row">
+									<div class="col-sm-1">
+										<span class="label label-danger" id="span_min_result_22_3" hidden="true" >MIN</span>
+									</div>
+									<div class="col-sm-1" style="padding-left: 7px;"></div>
+									<div class="col-sm-1">
+										<span class="label label-success" id="span_max_result_22_3" hidden="true" >MAX</span>
+									</div>
+								</div>
+							</div>
+							<span class="label label-default" onclick="reset($('#resultAparencia'), 22, 3)" >Reset</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>

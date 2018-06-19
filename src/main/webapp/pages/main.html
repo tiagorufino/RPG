@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>RPG FICHA</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/css/proprietario.css" media="screen" />
+		<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/Controll.js"></script>
+		<script type="text/javascript" src="../js/UtilFile.js"></script>
+		<script type="text/javascript" src="../js/Modal.js"></script>
+		<script type="text/javascript">
+			$("document").ready(function () {
+				var result = getCookie("result"); 
+				open(result);
+				$(".label").click(function(){
+		        	var title = this.title;
+		        	atributos(title);		            
+		        });
+			});
+		</script>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>                        
+		      </button>
+		      <a class="navbar-brand" href="#">Logo</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#">Home</a></li>
+		        <li><a href="#">Messages</a></li>
+		      </ul>
+		      <form class="navbar-form navbar-right" role="search">
+		        <div class="form-group input-group">
+		          <input type="text" class="form-control" placeholder="Search..">
+		          <span class="input-group-btn">
+		            <button class="btn btn-default" type="button">
+		              <span class="glyphicon glyphicon-search"></span>
+		            </button>
+		          </span>        
+		        </div>
+		      </form>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#"><span class="glyphicon glyphicon-user"></span> FIcha</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-sm-3 well">
+					<div class="well">
+						<p>
+							<a href="#ProfilePage">Darklew</a>
+						</p>
+						<!-- profile -->
+						<img src="../images/avatar/darklew.png" class="img-circle" height="65" width="65"
+							alt="Avatar">
+					</div>
+					<div class="well">
+						<p>
+							<span class="label label-default" id="atributos" title="Atributos" >Atributos</span>
+							<label id="fisicoTitulo" hidden="true"></label>
+							<label id="destreza" hidden="true"></label>
+							<label id="vigor" hidden="true"></label>
+							<label id="total" hidden="true"></label>
+						</p>
+						<p>
+							<h4 id="socialTitulo" hidden="true"></h4>
+							<h4 id="carisma" hidden="true"></h4>
+							<h4 id="manipulacao" hidden="true"></h4>
+							<h4 id="aparencia" hidden="true"></h4>
+							<h4 id="total" hidden="true"></h4>
+						</p>
+						<p>
+							<a href="#myModal" data-toggle="modal">Habilidades</a>
+							</p>
+							<p>
+								<a href="#HabilidadesPage">Vantagens</a>
+							</p>
+							<p>
+								<a href="#QualidadesPage">Qualidades</a>
+							</p>
+							<p>
+								<span class="label label-default" id="qualidade_1">Qualdiade
+									test 1</span> <span class="label label-default" id="qualidade_2">Qualidade
+									test 2</span> <span class="label label-success" id="qualidade_3">Qualidade
+									test 3</span> <span class="label label-success" id="qualidade_4">Qualidade
+									test 4</span> <span class="label label-primary" id="qualidade_5">Qualidade
+									test 5</span> <span class="label label-primary" id="qualidade_6">Qualidade
+									test 6</span>
+							</p>
+							<p>
+								<a href="#">Defeitos</a>
+							</p>
+							<p>
+								<span class="label label-warning" id="defeito_1">Defeito
+									test 1</span> <span class="label label-danger" id="defeito_2">Defeito
+									test 2</span> <span class="label label-warning" id="defeito_3">Defeito
+									test 3</span> <span class="label label-danger" id="defeito_4">Defeito
+									test 4</span> <span class="label label-danger" id="defeito_5">Defeito
+									test 5</span> <span class="label label-warning" id="defeito_6">Defeito
+									test 6</span>
+							</p>
+						</div>
+						<div class="alert alert-success fade in">
+							<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+							<p>
+								<strong>Common!!</strong>
+							</p>
+							Action...
+						</div>
+						<p>
+							<a href="#">Link</a>
+						</p>
+						<p>
+							<a href="#">Link</a>
+						</p>
+						<p>
+							<a href="#">Link</a>
+						</p>
+					</div>
+					<div class="col-sm-7">
+	
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="panel panel-default text-left">
+								<div class="panel-body">
+									<p contenteditable="true">
+										Status: <span onload="this.className='label label-default'" id="status"> </span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="well">
+								<p>
+									<span class="label label-info" id="action_player" >TIAGO</span>
+								</p>
+								<img src="../images/avatar/darklew.png" class="img-circle" height="55" width="55"
+									alt="Avatar">
+							</div>
+						</div>
+						<div class="col-sm-9">
+							<div class="well">
+								<p>Action</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="well">
+								<p>
+									<span class="label label-info" id="action_player">LEO</span>
+								</p>
+								<img src="../images/avatar/darklew.png" class="img-circle" height="55"
+									width="55" alt="Avatar">
+							</div>
+						</div>
+						<div class="col-sm-9">
+							<div class="well">
+								<p>Action...</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="well">
+								<p>
+									<span class="label label-info" id="action_player">DUDU</span>
+								</p>
+								<img src="../images/avatar/darklew.png" class="img-circle" height="55"
+									width="55" alt="Avatar">
+							</div>
+						</div>
+						<div class="col-sm-9">
+							<div class="well">
+								<p>Action...</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="well">
+								<p>
+									<span class="label label-info" id="action_player">GAGA</span>
+								</p>
+								<img src="../images/avatar/darklew.png" class="img-circle" height="55" width="55"
+									alt="Avatar">
+							</div>
+						</div>
+						<div class="col-sm-9">
+							<div class="well">
+								<p>Action...</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="thumbnail">
+						<p>
+							<strong> Next Action: </strong>
+						</p>
+						<img src="" alt="Map" width="400" height="300">
+						<p>
+							<strong>Master / Player</strong>
+						</p>
+						<button class="btn btn-primary" onclick="map()">MAP</button>
+					</div>
+					<div class="well">
+						<p>ADS</p>
+					</div>
+					<div class="well">
+						<p>ADS</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="container-fluid text-center">
+			<p>Footer Text</p>
+		</footer>
+		<div id="modal-tmp"></div>
+	</body>
+</html>

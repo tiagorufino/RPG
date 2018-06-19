@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>RPG</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/Controll.js"></script>
+		<script type="text/javascript">
+				jQuery(function($) {
+				});
+				function myFunction(variante, count) {
+				    $("#result"+variante).val(count);
+				    variante = "#" + variante;
+			    	var check = parseInt(count) - 1;
+		    		for (i = count; i > 0 ; i--) {
+		    			$(variante+i).prop("checked", true);
+		    		}
+			    	var uncheck = parseInt(count) + 1;				    	
+		    		for (i = uncheck; i <= 10; i++) {
+		    			$(variante+i).prop("checked", false);
+		    		}
+				}
+		</script>
+			
+	</head>
+	<body>
+		<header>
+			<div class="text-center">
+				<h1>
+					<b>VAMPIRO</b>
+				</h1>
+			</div>
+		</header>
+		<div class="container-fluit">
+			<div class="row">
+				<div class="col-sm-4">
+					<img src="/RPG/images/vampire.jpg" height="653px" width="461px">
+				</div>
+				<div class="col-sm-4">
+					<div calss="row">
+						<div class="col-md-2">
+							<h6>Nome: </h6>
+							<h6>Jogador: </h6>
+							<h6>Cronica: </h6>
+						</div>
+						<div class="col-sm-2">	
+							<h6>Natureza: </h6>
+							<h6>Comportamento: </h6>
+							<h6>Clã: </h6>						
+						</div>
+						<div class="col-sm-2">	
+							<h6>Geração: </h6>
+							<h6>Senhor: </h6>
+							<h6>Conceito: </h6>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="text-center">
+							<h1>
+								<b>Atributos</b>
+							</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-3">
+					<h4 align="center"><b>FÍSICOS</b></h4>
+					<div class="row">	
+						<h6>Força: &nbsp;&nbsp;&nbsp;&nbsp;	
+						<input type="radio" id="for1" multiple="multiple" value="1" onclick="myFunction('for', this.value)">
+						<input type="radio" id="for2" multiple="multiple" value="2" onclick="myFunction('for', this.value)">
+						<input type="radio" id="for3" multiple="multiple" value="3" onclick="myFunction('for', this.value)">
+						<input type="radio" id="for4" multiple="multiple" value="4" onclick="myFunction('for', this.value)">
+						<input type="radio" id="for5" multiple="multiple" value="5" onclick="myFunction('for', this.value)">
+						<input type="radio" id="for6" multiple="multiple" value="6" onclick="myFunction('for', this.value)">
+						<input type="radio" id="for7" multiple="multiple" value="7" onclick="myFunction('for', this.value)">
+						<input type="radio" id="for8" multiple="multiple" value="8" onclick="myFunction('for', this.value)">
+						<input type="radio" id="for9" multiple="multiple" value="9" onclick="myFunction('for', this.value)">
+						<input type="radio" id="for10" multiple="multiple" value="10" onclick="myFunction('for', this.value)">
+	    				<input type="text" id="resultfor" width="5" size="1" disabled="disabled"/></h6>	
+    				</div>
+					<div class="row">	
+						<h6>Destreza:
+						<input type="radio" id="des1" multiple="multiple" value="1" onclick="myFunction('des', this.value)">
+						<input type="radio" id="des2" multiple="multiple" value="2" onclick="myFunction('des', this.value)">
+						<input type="radio" id="des3" multiple="multiple" value="3" onclick="myFunction('des', this.value)">
+						<input type="radio" id="des4" multiple="multiple" value="4" onclick="myFunction('des', this.value)">
+						<input type="radio" id="des5" multiple="multiple" value="5" onclick="myFunction('des', this.value)">
+						<input type="radio" id="des6" multiple="multiple" value="6" onclick="myFunction('des', this.value)">
+						<input type="radio" id="des7" multiple="multiple" value="7" onclick="myFunction('des', this.value)">
+						<input type="radio" id="des8" multiple="multiple" value="8" onclick="myFunction('des', this.value)">
+						<input type="radio" id="des9" multiple="multiple" value="9" onclick="myFunction('des', this.value)">
+						<input type="radio" id="des10" multiple="multiple" value="10" onclick="myFunction('des', this.value)">
+	    				<input type="text" id="resultdes" width="5" size="1" disabled="disabled"/></h6>	
+    				</div>
+					<div class="row">	
+						<h6>Vigor: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+						<input type="radio" id="vig1" multiple="multiple" value="1" onclick="myFunction('vig', this.value)">
+						<input type="radio" id="vig2" multiple="multiple" value="2" onclick="myFunction('vig', this.value)">
+						<input type="radio" id="vig3" multiple="multiple" value="3" onclick="myFunction('vig', this.value)">
+						<input type="radio" id="vig4" multiple="multiple" value="4" onclick="myFunction('vig', this.value)">
+						<input type="radio" id="vig5" multiple="multiple" value="5" onclick="myFunction('vig', this.value)">
+						<input type="radio" id="vig6" multiple="multiple" value="6" onclick="myFunction('vig', this.value)">
+						<input type="radio" id="vig7" multiple="multiple" value="7" onclick="myFunction('vig', this.value)">
+						<input type="radio" id="vig8" multiple="multiple" value="8" onclick="myFunction('vig', this.value)">
+						<input type="radio" id="vig9" multiple="multiple" value="9" onclick="myFunction('vig', this.value)">
+						<input type="radio" id="vig10" multiple="multiple" value="10" onclick="myFunction('vig', this.value)">
+	    				<input type="text" id="resultvig" width="5" size="1" disabled="disabled"/></h6>	
+    				</div>
+				</div>
+				<div class="col-md-3">
+					<h4 align="center"><b>SOCIAIS</b></h4>
+					<div class="row">	
+						<h6>Carisma:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="radio" id="car1" multiple="multiple" value="1" onclick="myFunction('car', this.value)">
+						<input type="radio" id="car2" multiple="multiple" value="2" onclick="myFunction('car', this.value)">
+						<input type="radio" id="car3" multiple="multiple" value="3" onclick="myFunction('car', this.value)">
+						<input type="radio" id="car4" multiple="multiple" value="4" onclick="myFunction('car', this.value)">
+						<input type="radio" id="car5" multiple="multiple" value="5" onclick="myFunction('car', this.value)">
+						<input type="radio" id="car6" multiple="multiple" value="6" onclick="myFunction('car', this.value)">
+						<input type="radio" id="car7" multiple="multiple" value="7" onclick="myFunction('car', this.value)">
+						<input type="radio" id="car8" multiple="multiple" value="8" onclick="myFunction('car', this.value)">
+						<input type="radio" id="car9" multiple="multiple" value="9" onclick="myFunction('car', this.value)">
+						<input type="radio" id="car10" multiple="multiple" value="10" onclick="myFunction('car', this.value)">
+	    				<input type="text" id="resultcar" width="5" size="1" disabled="disabled"/></h6>	
+    				</div>						
+					<div class="row">	
+						<h6>Manipulação:
+						<input type="radio" id="man1" multiple="multiple" value="1" onclick="myFunction('man', this.value)">
+						<input type="radio" id="man2" multiple="multiple" value="2" onclick="myFunction('man', this.value)">
+						<input type="radio" id="man3" multiple="multiple" value="3" onclick="myFunction('man', this.value)">
+						<input type="radio" id="man4" multiple="multiple" value="4" onclick="myFunction('man', this.value)">
+						<input type="radio" id="man5" multiple="multiple" value="5" onclick="myFunction('man', this.value)">
+						<input type="radio" id="man6" multiple="multiple" value="6" onclick="myFunction('man', this.value)">
+						<input type="radio" id="man7" multiple="multiple" value="7" onclick="myFunction('man', this.value)">
+						<input type="radio" id="man8" multiple="multiple" value="8" onclick="myFunction('man', this.value)">
+						<input type="radio" id="man9" multiple="multiple" value="9" onclick="myFunction('man', this.value)">
+						<input type="radio" id="man10" multiple="multiple" value="10" onclick="myFunction('man', this.value)">
+	    				<input type="text" id="resultman" width="5" size="1" disabled="disabled"/></h6>	
+    				</div>						
+					<div class="row">	
+						<h6>Aparência:&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="radio" id="apa1" multiple="multiple" value="1" onclick="myFunction('apa', this.value)">
+						<input type="radio" id="apa2" multiple="multiple" value="2" onclick="myFunction('apa', this.value)">
+						<input type="radio" id="apa3" multiple="multiple" value="3" onclick="myFunction('apa', this.value)">
+						<input type="radio" id="apa4" multiple="multiple" value="4" onclick="myFunction('apa', this.value)">
+						<input type="radio" id="apa5" multiple="multiple" value="5" onclick="myFunction('apa', this.value)">
+						<input type="radio" id="apa6" multiple="multiple" value="6" onclick="myFunction('apa', this.value)">
+						<input type="radio" id="apa7" multiple="multiple" value="7" onclick="myFunction('apa', this.value)">
+						<input type="radio" id="apa8" multiple="multiple" value="8" onclick="myFunction('apa', this.value)">
+						<input type="radio" id="apa9" multiple="multiple" value="9" onclick="myFunction('apa', this.value)">
+						<input type="radio" id="apa10" multiple="multiple" value="10" onclick="myFunction('apa', this.value)">
+	    				<input type="text" id="resultapa" width="5" size="1" disabled="disabled"/></h6>	
+    				</div>						
+				</div>
+				<div class="col-md-3">
+					<h4 align="middle"><b>MENTAIS</b></h4>
+					<div class="row">	
+						<h6>Percepção:&nbsp;
+						<input type="radio" id="per1" multiple="multiple" value="1" onclick="myFunction('per', this.value)">
+						<input type="radio" id="per2" multiple="multiple" value="2" onclick="myFunction('per', this.value)">
+						<input type="radio" id="per3" multiple="multiple" value="3" onclick="myFunction('per', this.value)">
+						<input type="radio" id="per4" multiple="multiple" value="4" onclick="myFunction('per', this.value)">
+						<input type="radio" id="per5" multiple="multiple" value="5" onclick="myFunction('per', this.value)">
+						<input type="radio" id="per6" multiple="multiple" value="6" onclick="myFunction('per', this.value)">
+						<input type="radio" id="per7" multiple="multiple" value="7" onclick="myFunction('per', this.value)">
+						<input type="radio" id="per8" multiple="multiple" value="8" onclick="myFunction('per', this.value)">
+						<input type="radio" id="per9" multiple="multiple" value="9" onclick="myFunction('per', this.value)">
+						<input type="radio" id="per10" multiple="multiple" value="10" onclick="myFunction('per', this.value)">
+	    				<input type="text" id="resultper" width="5" size="1" disabled="disabled"/></h6>	
+    				</div>
+					<div class="row">	
+						<h6>Inteligência:
+						<input type="radio" id="int1" multiple="multiple" value="1" onclick="myFunction('int', this.value)">
+						<input type="radio" id="int2" multiple="multiple" value="2" onclick="myFunction('int', this.value)">
+						<input type="radio" id="int3" multiple="multiple" value="3" onclick="myFunction('int', this.value)">
+						<input type="radio" id="int4" multiple="multiple" value="4" onclick="myFunction('int', this.value)">
+						<input type="radio" id="int5" multiple="multiple" value="5" onclick="myFunction('int', this.value)">
+						<input type="radio" id="int6" multiple="multiple" value="6" onclick="myFunction('int', this.value)">
+						<input type="radio" id="int7" multiple="multiple" value="7" onclick="myFunction('int', this.value)">
+						<input type="radio" id="int8" multiple="multiple" value="8" onclick="myFunction('int', this.value)">
+						<input type="radio" id="int9" multiple="multiple" value="9" onclick="myFunction('int', this.value)">
+						<input type="radio" id="int10" multiple="multiple" value="10" onclick="myFunction('int', this.value)">
+	    				<input type="text" id="resultint" width="5" size="1" disabled="disabled"/></h6>	
+    				</div>
+					<div class="row">	
+						<h6>Raciocínio:&nbsp;
+						<input type="radio" id="rac1" multiple="multiple" value="1" onclick="myFunction('rac', this.value)">
+						<input type="radio" id="rac2" multiple="multiple" value="2" onclick="myFunction('rac', this.value)">
+						<input type="radio" id="rac3" multiple="multiple" value="3" onclick="myFunction('rac', this.value)">
+						<input type="radio" id="rac4" multiple="multiple" value="4" onclick="myFunction('rac', this.value)">
+						<input type="radio" id="rac5" multiple="multiple" value="5" onclick="myFunction('rac', this.value)">
+						<input type="radio" id="rac6" multiple="multiple" value="6" onclick="myFunction('rac', this.value)">
+						<input type="radio" id="rac7" multiple="multiple" value="7" onclick="myFunction('rac', this.value)">
+						<input type="radio" id="rac8" multiple="multiple" value="8" onclick="myFunction('rac', this.value)">
+						<input type="radio" id="rac9" multiple="multiple" value="9" onclick="myFunction('rac', this.value)">
+						<input type="radio" id="rac10" multiple="multiple" value="10" onclick="myFunction('rac', this.value)">
+	    				<input type="text" id="resultrac" width="5" size="1" disabled="disabled"/></h6>	
+    				</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
